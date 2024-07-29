@@ -4829,13 +4829,13 @@ void PrintConfigDef::init_fff_params()
     def->set_default_value(new ConfigOptionFloat(120));
 
     def = this->add("travel_speed_z", coFloat);
-    //def->label = L("Z travel");
-    //def->tooltip = L("Speed of vertical travel along z axis. "
-    //                 "This is typically lower because build plate or gantry is hard to be moved. "
-    //                 "Zero means using travel speed directly in gcode, but will be limited by printer's ability when run gcode");
+    def->label = L("Z travel");
+    def->tooltip = L("Speed of vertical travel along z axis. "
+                    "This is typically lower because build plate or gantry is hard to be moved. "
+                    "Zero means using travel speed directly in gcode, but will be limited by printer's ability when run gcode. This value will affect normalDefault is 0.");
     def->sidetext = L("mm/s");
     def->min = 0;
-    def->mode = comDevelop;
+    def->mode = comDevelop; //Orca: keep it comDevelop as it is not really needed for most users
     def->set_default_value(new ConfigOptionFloat(0.));
 
     def = this->add("wipe", coBools);

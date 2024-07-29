@@ -585,12 +585,9 @@ std::string GCodeWriter::_spiral_travel_to_z(double z, const Vec2d &ij_offset, c
 {
     m_pos(2) = z;
 
-    double speed = this->config.travel_speed_z.value;
-    if (speed == 0.) {
-        speed = m_is_first_layer ? this->config.get_abs_value("initial_layer_travel_speed")
-                                 : this->config.travel_speed.value;
-    }
-    
+    //Orca: always use travel speed for spiral lift
+    auto speed = m_is_first_layer ? this->config.get_abs_value("initial_layer_travel_speed") : this->config.travel_speed.value;
+
     std::string output = "G17\n";
     GCodeG2G3Formatter w(true);
     w.emit_z(z);

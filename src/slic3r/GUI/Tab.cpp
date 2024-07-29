@@ -2173,6 +2173,7 @@ void TabPrint::build()
 
         optgroup = page->new_optgroup(L("Travel speed"), L"param_travel_speed", 15);
         optgroup->append_single_option_line("travel_speed");
+        optgroup->append_single_option_line("travel_speed_z");
 
         optgroup = page->new_optgroup(L("Acceleration"), L"param_acceleration", 15);
         optgroup->append_single_option_line("default_acceleration");
