@@ -1,9 +1,12 @@
 {
-    "type": "machine",
-    "from": "system",
-    "instantiation": "true",
-    "inherits": "fdm_creality_common",
-    "printer_model": "Creality Ender-5 Max",
+	"type": "machine",
+	"setting_id": "GM001",
+	"name": "Creality Ender-5 Max 0.4 nozzle",
+	"from": "system",
+	"instantiation": "true",
+	"inherits": "fdm_creality_common",
+	"printer_model": "Creality Ender-5 Max",
+    "gcode_flavor": "klipper",
     "printer_structure": "i3",
     "auxiliary_fan": "0",
     "bbl_use_printhost": "0",
@@ -28,7 +31,6 @@
     "fan_kickstart": "0",
     "fan_speedup_overhangs": "1",
     "fan_speedup_time": "0",
-    "gcode_flavor": "klipper",
     "high_current_on_filament_swap": "0",
     "host_type": "octoprint",
     "machine_LED_light_exist": "1",
@@ -76,13 +78,13 @@
     "support_chamber_temp_control": "0",
     "support_multi_bed_types": "1",
     "thumbnails": "96x96,300x300",
-    "thumbnails_format": "CR_PNG",
+    "thumbnails_format": "PNG",
     "time_cost": "0",
     "use_firmware_retraction": "0",
     "use_relative_e_distances": "1",
     "z_offset": "0",
     "default_filament_profile": [
-        "Hyper PLA @Creality Ender-5 Max 0.4 nozzle"
+        "Creality Hyper PLA @Ender-5Max-all"
     ],
     "deretraction_speed": "50",
     "extruder_colour": "#FCE94F",
@@ -106,7 +108,5 @@
     "wipe": "1",
     "wipe_distance": "1",
     "z_hop": "0.4",
-    "z_hop_types": "Slope Lift",
-    "name": "Creality Ender-5 Max 0.4 nozzle",
-    "setting_id": "65721"
+    "z_hop_types": "Slope Lift"
 }
